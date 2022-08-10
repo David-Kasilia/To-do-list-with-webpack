@@ -16,7 +16,6 @@ const render = (todosList) => {
   });
   todosContainer.innerHTML = todosHtml;
 
-
   const removeBtns = document.querySelectorAll('.remove-btn');
   removeBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -26,7 +25,6 @@ const render = (todosList) => {
     });
   });
 
-  
   const todosContent = document.querySelectorAll('.todo-edit');
   todosContent.forEach((todo) => {
     todo.addEventListener('focusin', (e) => {
@@ -42,7 +40,6 @@ const render = (todosList) => {
     });
   });
 
-  
   const todosCheck = document.querySelectorAll('.todo-check');
   todosCheck.forEach((todo) => {
     todo.addEventListener('change', (e) => {

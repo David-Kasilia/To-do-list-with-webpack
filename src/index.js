@@ -5,7 +5,6 @@ import AddToDoList from './addRemoveTask.js';
 const todosList = new AddToDoList();
 render(todosList);
 
-// add todo
 const addTodoBtn = document.getElementById('addTask');
 addTodoBtn.addEventListener('click', () => {
   const id = `id${Math.random().toString(16).slice(2)}`;
@@ -22,7 +21,6 @@ addTodoBtn.addEventListener('click', () => {
   }
 });
 
-// clear all completed todos
 const clearBtn = document.getElementById('clear-btn');
 clearBtn.addEventListener('click', () => {
   todosList.clearCompletedTodos();
