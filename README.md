@@ -7,6 +7,7 @@ In this project, it includes building a simple HTML list of To Do tasks using we
 <li>HTML</li>
 <li>CSS</li>
 <li>JavaScript</li>
+  <li>Webpack</li>
 </ul>
 
 # Prerequisites
