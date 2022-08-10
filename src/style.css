@@ -1,8 +1,9 @@
-.container {
-  position: absolute;
-  top: 30%;
-  left: 30%;
+main {
+  position: fixed;
+  top: 20%;
+  left: 20%;
   right: 30%;
+  width: 60%;
   border-style: solid;
   border-width: 2px;
   border-color: gainsboro;
@@ -22,7 +23,7 @@
 }
 
 .refresh {
-  margin-top: 8px;
+  margin-top: 15px;
   margin-right: 20px;
   width: 25px;
   height: 25px;
@@ -36,8 +37,14 @@
 #addTask {
   width: 50px;
   height: 40px;
-  position: relative;
-  right: 1.5%;
+  right: 5%;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .title {
@@ -65,6 +72,7 @@
 
 form {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   padding-right: 0;
   position: relative;
@@ -81,7 +89,7 @@ form {
 form input[type='text'] {
   border: none;
   font-style: italic;
-  width: 85%;
+  width: 15%;
   padding: 1%;
 }
 
@@ -90,21 +98,11 @@ input[type='text']:focus {
 }
 
 .todo-item {
-  padding: 3%;
+  padding: 1%;
   border-bottom: 0.6px solid rgb(216, 216, 216);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-button {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
 }
 
 .remove {

@@ -1,44 +1,44 @@
 export default class AddToDoList {
   constructor() {
-    this.list = localStorage.getItem('todos')
-      ? JSON.parse(localStorage.getItem('todos'))
+    this.list = localStorage.getItem('taskList')
+      ? JSON.parse(localStorage.getItem('taskList'))
       : [];
   }
 
-  addTodo(todo) {
+  addTask(todo) {
     this.list.push(todo);
-    localStorage.setItem('todos', JSON.stringify(this.list));
+    localStorage.setItem('taskList', JSON.stringify(this.list));
   }
 
-  removeTodo(todoID) {
+  removeTask(todoID) {
     this.list = this.list.filter((todo) => todo.id !== todoID);
     this.list.forEach((todo, index) => {
       todo.index = index + 1;
     });
-    localStorage.setItem('todos', JSON.stringify(this.list));
+    localStorage.setItem('taskList', JSON.stringify(this.list));
   }
 
-  editTodo(todoId, todoDescription) {
+  editTask(todoId, todoDescription) {
     this.list = this.list.map((todo) => {
       if (todo.id === todoId) {
         return { ...todo, description: todoDescription };
       }
       return todo;
     });
-    localStorage.setItem('todos', JSON.stringify(this.list));
+    localStorage.setItem('taskList', JSON.stringify(this.list));
   }
 
-  completeTodo(todoId, status) {
+  completeTask(todoId, status) {
     const selected = this.list.findIndex((element) => element.id === todoId);
     this.list[selected].completed = status;
-    localStorage.setItem('todos', JSON.stringify(this.list));
+    localStorage.setItem('taskList', JSON.stringify(this.list));
   }
 
-  clearCompletedTodos() {
+  clearCompletedTask() {
     this.list = this.list.filter((todo) => !todo.completed);
     this.list.forEach((todo, index) => {
       todo.index = index + 1;
     });
-    localStorage.setItem('todos', JSON.stringify(this.list));
+    localStorage.setItem('taskList', JSON.stringify(this.list));
   }
 }

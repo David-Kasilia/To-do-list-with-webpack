@@ -2,27 +2,28 @@ import './style.css';
 import render from './populateTaskList.js';
 import AddToDoList from './addRemoveTask.js';
 
-const todosList = new AddToDoList();
-render(todosList);
+
+const taskList = new AddToDoList();
+render(taskList);
 
 const addTodoBtn = document.getElementById('addTask');
 addTodoBtn.addEventListener('click', () => {
   const id = `id${Math.random().toString(16).slice(2)}`;
   const description = document.getElementById('task').value.trim();
   const completed = false;
-  const index = todosList.list.length + 1;
+  const index = taskList.list.length + 1;
 
-  const newTodo = {
+  const newTask = {
     id, description, completed, index,
   };
   if (description) {
-    todosList.addTodo(newTodo);
-    render(todosList);
+    taskList.addTask(newTask);
+    render(taskList);
   }
 });
 
 const clearBtn = document.getElementById('clear-btn');
 clearBtn.addEventListener('click', () => {
-  todosList.clearCompletedTodos();
-  render(todosList);
+  taskList.clearCompletedTask();
+  render(taskList);
 });
