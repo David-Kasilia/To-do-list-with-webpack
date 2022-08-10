@@ -1,63 +1,113 @@
-main{
-    position:absolute;
-    top: 10%;
-    left: 30%;
-    right: 30%;
-    border-style: solid;
-    border-width: 2px;
-    border-color: gainsboro;
+.container {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  right: 30%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: gainsboro;
+  box-shadow: 3px 10px 10px rgb(0 0 0 / 15%);
 }
 
-.head-container{
-    margin: auto 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 50px;
-    width: 100%;
-    border-style: solid;
-    border-width: 2px;
-    border-color: gainsboro;
+.head-container {
+  margin: auto 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: gainsboro;
 }
 
-.refresh{
-    margin-top: 10px;
-    margin-right: 20px;
-    width: 25px;
-    height: 25px;
+.refresh {
+  margin-top: 8px;
+  margin-right: 20px;
+  width: 25px;
+  height: 25px;
 }
 
-.enter{
-    width: 15px;
-    height: 15px;
-
+.enter {
+  width: 15px;
+  height: 15px;
 }
 
-#addTask{
-    width: 6%;
+#addTask {
+  width: 50px;
+  height: 40px;
+  position: relative;
+  right: 1.5%;
 }
 
-.title{
-    margin-left: 20px;
-    font-size: 24px;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: gray;
+.title {
+  margin-left: 20px;
+  font-size: 24px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: gray;
 }
 
-#task{
-    width: 90%;
-    height: 40px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: gainsboro;
-    
+#task {
+  width: 90%;
+  height: 40px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: gainsboro;
 }
 
-#clear-btn{
-    width: 100%;
-    height: 40px;
-    font-size: 20px;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: gray;
+#clear-btn {
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: gray;
+}
 
+form {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0;
+  position: relative;
+  border-top: 0.6px solid rgb(216, 216, 216);
+  border-right: none;
+  border-bottom: 0.6px solid rgb(216, 216, 216);
+  border-left: none;
+}
+
+.todo-edit {
+  border: none;
+}
+
+form input[type='text'] {
+  border: none;
+  font-style: italic;
+  width: 85%;
+  padding: 1%;
+}
+
+input[type='text']:focus {
+  outline: none;
+}
+
+.todo-item {
+  padding: 3%;
+  border-bottom: 0.6px solid rgb(216, 216, 216);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.remove {
+  height: 30px;
+  width: 30px;
 }
