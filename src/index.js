@@ -1,7 +1,7 @@
 import './style.css';
 import render from './populateTaskList.js';
 import AddToDoList from './addRemoveTask.js';
-
+// import img from '../images/index-removebg-preview.png'
 
 const taskList = new AddToDoList();
 render(taskList);

@@ -10,7 +10,7 @@ const render = (taskList) => {
                             <input id="${id}" class="todo-check" type="checkbox" ${checkedTodo} />
                             <input id="${id}" class="todo-edit ${checkClass}" type="text" value="${description}" />
                         </div>
-                        <button id="${id}" class="remove-btn"><img class="remove" src="../images/images-removebg-preview.png"></button>
+                        <button id="${id}" class="remove-btn"><i id="remove" class="fa-solid fa-trash-can fa-lg"></i></button>
                     </div>
     `;
   });
