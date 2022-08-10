@@ -1,6 +1,6 @@
 import './style.css';
-import render from './toDoList.js';
-import AddToDoList from './addToDo.js';
+import render from './populateTaskList.js';
+import AddToDoList from './addRemoveTask.js';
 
 const todosList = new AddToDoList();
 render(todosList);
