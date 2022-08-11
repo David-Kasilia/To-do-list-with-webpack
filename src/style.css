@@ -24,14 +24,16 @@ main {
 
 #refresh {
   margin-top: 25px;
-  margin-right: 20px;
+  margin-right: 5px;
   width: 45px;
   height: 45px;
+  font-size: 28px;
 }
 
 #enter {
-  margin-right: 20px;
-  margin-top: 25px;
+  margin-right: 35px;
+  margin-top: 15px;
+  font-size: 40px;
 }
 
 #addTask {
@@ -111,4 +113,9 @@ input[type='text']:focus {
   height: 28px;
   width: 28px;
   margin-right: 20px;
+}
+
+#refreshBtn {
+  outline: none;
+  border: none;
 }

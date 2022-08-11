@@ -1,10 +1,9 @@
 import './style.css';
-import render from './populateTaskList.js';
+import displayTasks from './populateTaskList.js';
 import AddToDoList from './addRemoveTask.js';
-// import img from '../images/index-removebg-preview.png'
 
 const taskList = new AddToDoList();
-render(taskList);
+displayTasks(taskList);
 
 const addTodoBtn = document.getElementById('addTask');
 addTodoBtn.addEventListener('click', () => {
@@ -18,12 +17,17 @@ addTodoBtn.addEventListener('click', () => {
   };
   if (description) {
     taskList.addTask(newTask);
-    render(taskList);
+    displayTasks(taskList);
   }
 });
 
 const clearBtn = document.getElementById('clear-btn');
 clearBtn.addEventListener('click', () => {
   taskList.clearCompletedTask();
-  render(taskList);
+  displayTasks(taskList);
+});
+
+const refreshPage = document.getElementById('refreshBtn');
+refreshPage.addEventListener('click', () => {
+  window.location.reload();
 });
