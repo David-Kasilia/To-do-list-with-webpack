@@ -9,18 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
     <script defer src="main.js"></script>
     <script src="https://kit.fontawesome.com/75471b6a8f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,1,0" />
 <script defer src="runtime.js"></script><script defer src="main.js"></script></head>
 <body>
 
     <main>
         <div class="head-container">
              <h1 class="title">Today's To Do</h1>
-             <i id="refresh" class="fa-solid fa-arrows-rotate fa-xl"></i>
+             <button type="button" id="refreshBtn"><i id="refresh" class="fa-solid fa-arrows-rotate fa-xl"></i></button>
         </div>
         <div class="form-container">
             <form id="taskList" >
                 <input id="task" placeholder="Add to your list" type="text" name="Task" autofocus />
-                <button  type="submit" id="addTask"><i id="enter" class="fa-solid fa-square-up-right fa-2xl"></i></button>
+                <button  type="submit" id="addTask"><span id="enter" class="material-symbols-outlined">
+                    keyboard_return
+                    </span></button>
             </form>
         </div>
         <div id="task-container">

@@ -1,4 +1,4 @@
-const render = (taskList) => {
+const displayTasks = (taskList) => {
   const sortedTask = taskList.list.sort((a, b) => a.index - b.index);
   const taskContainer = document.getElementById('task-container');
   let taskHtml = '';
@@ -50,4 +50,4 @@ const render = (taskList) => {
   });
 };
 
-export default render;
+export default displayTasks;
