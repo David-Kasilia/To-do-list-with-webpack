@@ -2,7 +2,7 @@
 # To-do-list-with-webpack and ES6
 In this project, it includes building a simple HTML list of To Do tasks using webpack and served by a webpack dev server.
 
-# Link To Live Link
+# Link To Live Project
 https://david-kasilia.github.io/To-do-list-with-webpack/
 
 # Built with
