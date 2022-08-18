@@ -67,3 +67,28 @@ describe('editTaskTest', () => {
     expect(todoList.list).toHaveLength(4);
   });
 });
+
+describe('Complete Task Test', () => {
+  test('completedTask', () => {
+    const todoList = new AddToDoList();
+    const newTask5 = {
+      id: 'id1234567',
+      description: 'task5',
+      completed: false,
+      index: 4,
+    };
+    todoList.addTask(newTask5);
+    todoList.completeTask(newTask5.id, true);
+    expect(todoList.list[4].completed).toBeTruthy();
+    expect(todoList.list).toHaveLength(5);
+  });
+});
+
+describe('Clear Completed Test', () => {
+  test('clearCompletedTask', () => {
+    const todoList = new AddToDoList();
+    todoList.clearCompletedTask();
+    expect(todoList.list).toHaveLength(4);
+    expect(todoList.list[1].completed).toBeFalsy();
+  });
+});
