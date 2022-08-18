@@ -50,18 +50,45 @@ describe('add and remove', () => {
     expect(todoList.list).toHaveLength(3);
     expect(todoList.list[2].description).toBe('task3');
   });
+});
 
-  test('remove task', () => {
+describe('editTaskTest', () => {
+  test('editTask', () => {
     const todoList = new AddToDoList();
-    const newTask = {
+    const newTask4 = {
       id: 'id123456',
       description: 'task4',
       completed: false,
       index: 3,
     };
-    todoList.addTask(newTask);
-    todoList.removeTask(newTask.id);
-    expect(todoList.list[2].description).toBe('task3');
-    expect(todoList.list).toHaveLength(3);
+    todoList.addTask(newTask4);
+    todoList.editTask(newTask4.id, 'task changed');
+    expect(todoList.list[3].description).toBe('task changed');
+    expect(todoList.list).toHaveLength(4);
+  });
+});
+
+describe('Complete Task Test', () => {
+  test('completedTask', () => {
+    const todoList = new AddToDoList();
+    const newTask5 = {
+      id: 'id1234567',
+      description: 'task5',
+      completed: false,
+      index: 4,
+    };
+    todoList.addTask(newTask5);
+    todoList.completeTask(newTask5.id, true);
+    expect(todoList.list[4].completed).toBeTruthy();
+    expect(todoList.list).toHaveLength(5);
+  });
+});
+
+describe('Clear Completed Test', () => {
+  test('clearCompletedTask', () => {
+    const todoList = new AddToDoList();
+    todoList.clearCompletedTask();
+    expect(todoList.list).toHaveLength(4);
+    expect(todoList.list[1].completed).toBeFalsy();
   });
 });
