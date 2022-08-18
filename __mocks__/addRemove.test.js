@@ -23,44 +23,44 @@ describe('add and remove', () => {
   window.localStorage = Storage.prototype;
   test('Add task', () => {
     const todoList = new AddToDoList();
-    const newTodo = {
+    const newTask = {
       id: 'id123',
       description: 'task1',
       completed: false,
       index: 1,
     };
-    const newTodo2 = {
+    const newTask2 = {
       id: 'id1234',
       description: 'task2',
       completed: false,
       index: 2,
     };
-    const newTodo3 = {
+    const newTask3 = {
       id: 'id12345',
       description: 'task3',
       completed: false,
       index: 2,
     };
-    todoList.addTask(newTodo);
+    todoList.addTask(newTask);
     expect(todoList.list).toHaveLength(1);
-    todoList.addTask(newTodo2);
+    todoList.addTask(newTask2);
     expect(todoList.list).toHaveLength(2);
     expect(todoList.list[1].description).toBe('task2');
-    todoList.addTask(newTodo3);
+    todoList.addTask(newTask3);
     expect(todoList.list).toHaveLength(3);
     expect(todoList.list[2].description).toBe('task3');
   });
 
   test('remove task', () => {
     const todoList = new AddToDoList();
-    const newTodo = {
+    const newTask = {
       id: 'id123456',
       description: 'task4',
       completed: false,
       index: 3,
     };
-    todoList.addTask(newTodo);
-    todoList.removeTask(newTodo.id);
+    todoList.addTask(newTask);
+    todoList.removeTask(newTask.id);
     expect(todoList.list[2].description).toBe('task3');
     expect(todoList.list).toHaveLength(3);
   });
